@@ -11,6 +11,7 @@ const NavBarPrimary = () => {
                 <li><NavLink to="/kontakt">KONTAKT</NavLink></li>
                 <li><NavLink to="/login">LOGIN</NavLink></li>
             </ul>
+            
         </NavBarPrimaryStyle>
     )
 }
