@@ -8,3 +8,9 @@ export const Reset = `
     margin-inline-end: 0px;
     padding-inline-start: 0px;
 `
+
+
+export const ClearList = `
+	list-style-type: none;
+	${Reset}
+`
