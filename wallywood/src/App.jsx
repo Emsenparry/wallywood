@@ -1,12 +1,13 @@
-import { ContainerStyle }from "./components/Container.style";
+import { ContainerStyle }from "./components/styled/Container.style";
+import Header from "./components/partials/Header";
+import AppRouter from "./components/app/approuter/AppRouter";
 
 const App = () => {
   return (
-    <div className="App">
-      <ContainerStyle>
-        fufhu
-      </ContainerStyle>
-    </div>
+    <ContainerStyle maxwidth="1024">
+        <Header />
+        <AppRouter />
+    </ContainerStyle>
       
   );
 }
