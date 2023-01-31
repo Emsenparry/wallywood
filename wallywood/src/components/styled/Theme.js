@@ -1,3 +1,4 @@
+
 export const theme = {
     colors: {
         primary: '#5C1F06',
@@ -5,5 +6,6 @@ export const theme = {
         light: '#FFF',
         dark: '#000'
     },
-    fonts: ['Titillium Web', 'Open Sans']
+    fonts: ['Titillium Web',
+    'Open Sans']
 }
