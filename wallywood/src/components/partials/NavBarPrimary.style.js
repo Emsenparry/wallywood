@@ -10,7 +10,7 @@ export const NavBarPrimaryStyle = styled.nav`
         ${ClearList}
     }
     li{
-        margin-left: 20px;
+        margin-left: 2rem;
 
         a{
             font-family: ${props => props.theme.fonts[0]};
