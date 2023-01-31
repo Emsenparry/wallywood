@@ -19,6 +19,7 @@ const PosterList = () => {
         const getData = async () => {
             try{
                 const result = await axios.get(url)
+                setApiData()
             }
         }
     })
