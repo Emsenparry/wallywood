@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
             <div>
                 CVR: 12345678 <br />
-                MAIL: info@wallywoof.dk <br />
+                MAIL: info@wallywood.dk <br />
                 MOBIL: +45 9812 3456
             </div>
             <div>
