@@ -1,6 +1,8 @@
 import { ContentWrapper } from "../../components/app/contentwrapper/ContentWrapper"
 import SlideWrapper from "../../components/app/slidewrapper/SlideWrapper"
 import { usePosterData } from "../../components/app/posterlist/PosterList"
+import { HomeStyle } from "./Home.style"
+
 
 const Home = () => {
     const { posterList } = usePosterData()
@@ -10,25 +12,25 @@ const Home = () => {
         <>
         <SlideWrapper />
         <ContentWrapper
-                title="Home">
-                <section>
+                title="Sidste nyt...">
+                <HomeStyle>
                     {posterList && posterList.slice(0,2).map(poster => {
                         return(
                             <figure key={poster.id}>
                                 <img src={poster.image} alt="Poster" />
                                 <figcaption>
-                                <p>{poster.name}</p>
-                                <p>{poster.description}</p>
+                                <h2>{poster.name}</h2>
+                                {<p dangerouslySetInnerHTML={{__html: poster.description}}></p>}
                                 {poster.genres && poster.genres.map(genre => {
                                     return(
-                                        <p>{genre.title}</p>
+                                        <p>Genre: {genre.title}</p>
                                     )
                                 })}
                                 </figcaption>
                             </figure>
                         )
                     })}
-                </section>
+                </HomeStyle>
         </ContentWrapper>
         </>
         
