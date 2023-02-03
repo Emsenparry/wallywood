@@ -11,7 +11,7 @@ const PosterProvider = ({children}) => {
             setPosterList(JSON.parse(sessionStorage.getItem('posterlist')))
         } else {
             const getData = async () => {
-                const result = await axios.get('http://localhost:4000/poster')
+                const result = await axios.get('http://localhost:4000/posters/list')
                 sessionStorage.setItem('posterlist', JSON.stringify(result.data));
                 setPosterList(result.data)
             }
