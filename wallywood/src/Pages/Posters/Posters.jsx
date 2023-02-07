@@ -33,7 +33,7 @@ const GenreList = () => {
             {data && data.map(genre => {
                 return(
                     <li key={genre.id}>
-                        <Link to={`/plakater/${genre.slug}`}>{genre.title}</Link></li>
+                        <Link to={`/posters/${genre.slug}`}>{genre.title}</Link></li>
                 )
             })}
         </ul>
@@ -58,7 +58,7 @@ const PosterList = () => {
             {data && data.map(poster => {
                 return(
                     <li key={poster.id}>
-                    <Link to={`/poster/${slug}/${poster.id}`}>{poster.name}</Link>
+                    <Link to={`/posters/${slug}/${poster.slug}`}>{poster.name}</Link>
                     </li>
                 )
             })}
@@ -70,26 +70,22 @@ const PosterList = () => {
 
 const PosterDetails = () => {
     const [data, setData] = useState([])
-    const { id } = useParams();
+    const { poster } = useParams();
+    console.log(poster);
     
     useEffect(() => {
         const getData = async () => {
-            const result = await axios.get(`http://localhost:4000/poster/list/${id}`)
+            const result = await axios.get(`http://localhost:4000/poster/details/${poster}`)
             setData(result.data);    
         }
         getData()
-    }, [id])
+    }, [poster])
 
     return(
         <ul>
-            {data && data.map(poster => {
-                return(
-                    <li>
-                        Plakatdetaljer
-                    </li>
-                    
-                )
-            })}
+            {data && (
+                <img src={data.image} alt={data.name} />
+            )}
         </ul>
     )
 
