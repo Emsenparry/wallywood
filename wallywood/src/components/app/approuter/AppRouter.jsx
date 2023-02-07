@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from '../../../Pages/Home/Home'
 import NotFound from '../../../Pages/NotFound/NotFound'
+import OmOs from '../../../Pages/omos/OmOs'
 import { PosterDetails, PosterList, Posters } from '../../../Pages/Posters/Posters'
 
 
@@ -12,6 +13,7 @@ const AppRouter = () => {
                     <Route path=":slug" element={<PosterList />}/>
                     <Route path=":slug/:poster" element={<PosterDetails />} />
             </Route>
+            <Route path="/omos" element={<OmOs />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

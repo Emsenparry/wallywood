@@ -29,7 +29,7 @@ const GenreList = () => {
     }, [setData])
 
     return(
-        <>
+        <div className="genre">
         <h2>Filtre</h2>
         <p>Genre</p>
         <ul>
@@ -40,7 +40,7 @@ const GenreList = () => {
                 )
             })}
         </ul>
-        </>
+        </div>
     )
 
 }

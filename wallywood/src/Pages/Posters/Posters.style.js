@@ -6,8 +6,9 @@ export const PosterStyle = styled.div`
     padding: 0;
     
     // GENRE LIST
+.genre{
     h2{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     p{
         margin: 0;
@@ -25,13 +26,14 @@ export const PosterStyle = styled.div`
             color: ${props => props.theme.colors.dark};
         }
     }
+}
 
 
     // DIV WITH IMAGES
     .box{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 2em 3em;
+        gap: 1em;
         margin: 0 0 1em 4em;
         border-left: solid 1px ${props => props.theme.colors.quinary};
         .images{
@@ -39,15 +41,11 @@ export const PosterStyle = styled.div`
         img{
             max-width: 100%;
         }
-        h2{
+        h2, h3{
             margin: 0 0 0.5em 0;
             text-align: center;
         }
-        h3{
-            text-align: center;
-            margin: 0 0 1em 0;
-        }
-        }
+    }
         div{
             text-align: center;
             button {
