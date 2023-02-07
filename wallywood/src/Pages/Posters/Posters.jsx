@@ -29,14 +29,18 @@ const GenreList = () => {
     }, [setData])
 
     return(
+        <>
+        <h2>Filtre</h2>
+        <p>Genre</p>
         <ul>
-            {data && data.map(genre => {
+            {data && data.slice(0,9).map(genre => {
                 return(
                     <li key={genre.id}>
                         <Link to={`/posters/${genre.slug}`}>{genre.title}</Link></li>
                 )
             })}
         </ul>
+        </>
     )
 
 }
@@ -54,15 +58,23 @@ const PosterList = () => {
     }, [slug])
 
     return(
-        <ul>
-            {data && data.map(poster => {
+        <div className="box">
+            {data && data.slice(0,9).map(poster => {
                 return(
-                    <li key={poster.id}>
-                    <Link to={`/posters/${slug}/${poster.slug}`}>{poster.name}</Link>
-                    </li>
+                    <div key={poster.id}>
+                    <Link to={`/posters/${slug}/${poster.slug}`}></Link>
+                    <div className="images">
+                    <img src={poster.image} alt={poster.name} />
+                    <h2>{poster.name}</h2>
+                    <h3>Kr. {poster.price}</h3>
+                    <div>
+                    <button type='button'>Læg i kurv</button>
+                    </div>
+                    </div>
+                    </div>
                 )
             })}
-        </ul>
+        </div>
     )
 
 }

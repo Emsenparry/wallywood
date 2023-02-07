@@ -19,7 +19,7 @@ export const NavBarPrimaryStyle = styled.nav`
             font-size: 1.1rem;
             white-space: nowrap;
             &:hover {
-                color: ${props => props.theme.colors.secondary};;
+                color: ${props => props.theme.colors.secondary};
             }
     }
         

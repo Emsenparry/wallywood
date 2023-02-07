@@ -23,7 +23,7 @@ const Home = () => {
                                 <p>Abernes Planet: Revolutionen&#8217;, foregår i en fremtid, hvor den hyperintelligente chimpanse, Caesar, leder en voksende nation af genetisk udviklede abekatte.</p>
                                 {poster.genres && poster.genres.map(genre => {
                                     return(
-                                        <p>Genre: {genre.title}</p>
+                                        <p key={poster.id}>Genre: {genre.title}</p>
                                     )
                                 })}
                                 <button type='button'>Læs mere</button>
