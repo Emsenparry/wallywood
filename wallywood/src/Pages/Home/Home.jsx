@@ -6,7 +6,7 @@ import { HomeStyle } from "./Home.style"
 
 const Home = () => {
     const { posterList } = usePosterData()
-    console.log(posterList);
+    // console.log(posterList);
 
     return(
         <>

@@ -3,7 +3,7 @@ import { Reset } from '../styled/Mixins'
 
 export const FooterStyle = styled.footer`
     border-top: solid 1px ${props => props.theme.colors.quinary};
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
