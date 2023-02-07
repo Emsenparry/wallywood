@@ -6,7 +6,7 @@ import { HomeStyle } from "./Home.style"
 
 const Home = () => {
     const { posterList } = usePosterData()
-    // console.log(posterList);
+    console.log(posterList);
 
     return(
         <>
@@ -20,12 +20,13 @@ const Home = () => {
                                 <img src={poster.image} alt="Poster" />
                                 <figcaption>
                                 <h2>{poster.name}</h2>
-                                {<p dangerouslySetInnerHTML={{__html: poster.description}}></p>}
+                                <p>Abernes Planet: Revolutionen&#8217;, foregår i en fremtid, hvor den hyperintelligente chimpanse, Caesar, leder en voksende nation af genetisk udviklede abekatte.</p>
                                 {poster.genres && poster.genres.map(genre => {
                                     return(
                                         <p>Genre: {genre.title}</p>
                                     )
                                 })}
+                                <button type='button'>Læs mere</button>
                                 </figcaption>
                             </figure>
                         )

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { ContentWrapper } from "../../components/app/contentwrapper/ContentWrapper"
 import { PosterStyle } from "./Posters.style"
 import axios from "axios"
-import { Link, NavLink, Outlet, useParams } from "react-router-dom"
+import { Link, Outlet, useParams } from "react-router-dom"
 
 
 const Posters = () => {
@@ -33,7 +33,7 @@ const GenreList = () => {
             {data && data.map(genre => {
                 return(
                     <li key={genre.id}>
-                        <NavLink to={`/plakater/${genre.slug}`}>{genre.title}</NavLink></li>
+                        <Link to={`/plakater/${genre.slug}`}>{genre.title}</Link></li>
                 )
             })}
         </ul>
