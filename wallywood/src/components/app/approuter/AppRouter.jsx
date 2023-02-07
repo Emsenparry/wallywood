@@ -10,7 +10,7 @@ const AppRouter = () => {
             <Route index element={<Home />} />
             <Route path="/plakater">
                 <Route index element={<Posters />} />
-                <Route path=":slug" element={<PosterList />}>
+                    <Route path=":slug" element={<PosterList />}>
                     <Route path=":id" element={<PosterDetails />} />
                 </Route>
             </Route>
