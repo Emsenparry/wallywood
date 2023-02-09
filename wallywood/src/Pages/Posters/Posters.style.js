@@ -32,7 +32,7 @@ export const PosterStyle = styled.div`
     // DIV WITH IMAGES
     .box{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
         gap: 1em;
         margin: 0 0 1em 4em;
         border-left: solid 1px ${props => props.theme.colors.quinary};
