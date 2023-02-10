@@ -7,6 +7,7 @@ import { GlobalStyle } from './components/styled/Global.style'
 import { BrowserRouter } from 'react-router-dom'
 import { PosterProvider } from './components/app/posterlist/PosterList';
 import { AuthProvider } from './components/providers/AuthProvider';
+import { CartProvider } from './components/providers/CartProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,10 +15,12 @@ root.render(
     <PosterProvider>
     <BrowserRouter>
     <AuthProvider>
+    <CartProvider>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
         <App />
     </ThemeProvider>
+    </CartProvider>
     </AuthProvider>
     </BrowserRouter>
     </PosterProvider>

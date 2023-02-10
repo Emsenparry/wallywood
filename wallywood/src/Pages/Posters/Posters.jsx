@@ -3,6 +3,7 @@ import { ContentWrapper } from "../../components/app/contentwrapper/ContentWrapp
 import { PosterStyle } from "./Posters.style"
 import axios from "axios"
 import { Link, Outlet, useParams } from "react-router-dom"
+import AddToCartButton from "../Cart/AddToCartButton"
 
 
 const Posters = () => {
@@ -61,17 +62,17 @@ const PosterList = () => {
         <div className="box">
             {data && data.slice(0,9).map(poster => {
                 return(
-                    <div key={poster.id}>
+                <div key={poster.id}>
                     <Link to={`/posters/${slug}/${poster.slug}`}></Link>
-                    <div className="images">
+                        <div className="images">
                     <img src={poster.image} alt={poster.name} />
                     <h2>{poster.name}</h2>
-                    <h3>Kr. {poster.price}</h3>
+                    <h3>Kr. {poster.price},00</h3>
                     <div>
-                    <button type='button'>Læg i kurv</button>
-                    </div>
-                    </div>
-                    </div>
+                    <AddToCartButton id={poster.id}>Læg i kurv</AddToCartButton>
+                        </div>
+                </div>
+        </div>
                 )
             })}
         </div>
